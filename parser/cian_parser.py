@@ -7,8 +7,8 @@ def parsing(url):
         driver = parser_property.driver_create(url)
 
         params = {}
-        params["цена"] = driver.find_element(By.XPATH,'//*[@id="frontend-offer-card"]/div/div[2]/div[3]/div/div[1]/div[1]/div[3]/div/div[1]/span').text
-        params["адрес"] = driver.find_element(By.XPATH,'//*[@id="frontend-offer-card"]/div/div[2]/div[2]/section/div/div/div[2]/address/div/div').text.replace("На карте","")
+        params["Цена"] = driver.find_element(By.XPATH,'//*[@id="frontend-offer-card"]/div/div[2]/div[3]/div/div[1]/div[1]/div[4]/div/div[1]/span').text
+        params["Адрес"] = driver.find_element(By.XPATH,'//*[@id="frontend-offer-card"]/div/div[2]/div[2]/section/div/div/div[2]/address/div/div').text.replace("На карте","")
 
         elems = driver.find_elements(By.CLASS_NAME,"a10a3f92e9--item--Jp5Qv")
         for i in elems:
