@@ -13,7 +13,7 @@ def parsing(url):
         if (count_rooms.split('-')[1]=="студия"):
                 params["Количество комнат"] = 0
         else:
-                params["Количество комнат"] = count_rooms.split('-')[0].strip()
+                params["Количество комнат"] = count_rooms.split('-')[0].split(',')[-1].strip()
         elems = driver.find_elements(By.CLASS_NAME,"OfferCardHighlight__container--2gZn2")
         for i in elems:
                 key = i.text.split("\n")[1]
